@@ -1,0 +1,48 @@
+<%@ page language="java" contentType="text/html; charset=utf-8"
+    pageEncoding="utf-8"%>
+    <%@ page import="java.sql.*" %>
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>회원가입 처리 페이지</title>
+	</head>
+	<body>
+		<%	
+			request.setCharacterEncoding("utf-8");
+			String name = request.getParameter("nm");
+			String userId = request.getParameter("userId");
+			String pwd = request.getParameter("pwd");
+			String email = request.getParameter("email");
+			String phone = request.getParameter("phone");
+			String admin = request.getParameter("admin");
+			Connection conn = null;
+			Statement stmt = null;
+			
+			String url = "jdbc:mysql://127.0.0.1:3306/sample";
+			String db_id="root";
+			String db_pw="iotiot";
+			String sql = "insert into member(name, userid , pwd , email, phone, admin) values('";
+			sql += name+"', '"+userId+"','"+pwd+"','"+email+"','"+phone+"','"+admin+"');";
+			
+			System.out.println(sql);
+			
+			try{
+				Class.forName("com.mysql.cj.jdbc.Driver");
+				conn= DriverManager.getConnection(url,db_id,db_pw);
+				stmt = conn.createStatement();
+				out.print("접속 이상 없음");
+				
+			}catch(Exception e){
+				System.out.println("member_insert.jsp ing error "+e);
+			}finally{
+				try{
+					if(stmt!=null)stmt.close();
+					if(conn!=null)conn.close();
+				}catch(Exception ex){
+					System.out.println("member_insert.jsp end error "+ex);
+				}
+			}
+		%>
+	</body>
+</html>
