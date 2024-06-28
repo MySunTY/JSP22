@@ -160,7 +160,7 @@
              Note: The pattern used is equivalent to using pattern="common" -->
         <Valve className="org.apache.catalina.valves.AccessLogValve" directory="logs" pattern="%h %l %u %t &quot;%r&quot; %s %b" prefix="localhost_access_log" suffix=".txt"/>
 
-      <Context docBase="AJAX03" path="/AJAX03" reloadable="true" source="org.eclipse.jst.jee.server:AJAX03"/><Context docBase="JSP30" path="/JSP30" reloadable="true" source="org.eclipse.jst.jee.server:JSP30"/></Host>
+      <Context docBase="AJAX03" path="/AJAX03" reloadable="true" source="org.eclipse.jst.jee.server:AJAX03"/><Context docBase="JSP30" path="/JSP30" reloadable="true" source="org.eclipse.jst.jee.server:JSP30"/><Context docBase="AJAXprac" path="/AJAXprac" reloadable="true" source="org.eclipse.jst.jee.server:AJAXprac"/><Context docBase="AJAXprac2" path="/AJAXprac2" reloadable="true" source="org.eclipse.jst.jee.server:AJAXprac2"/><Context docBase="AJAXprac3" path="/AJAXprac3" reloadable="true" source="org.eclipse.jst.jee.server:AJAXprac3"/><Context docBase="AJAX04" path="/AJAX04" reloadable="true" source="org.eclipse.jst.jee.server:AJAX04"/><Context docBase="AJAXprac4" path="/AJAXprac4" reloadable="true" source="org.eclipse.jst.jee.server:AJAXprac4"/></Host>
     </Engine>
   </Service>
 </Server>

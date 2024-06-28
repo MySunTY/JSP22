@@ -6,7 +6,7 @@
 	<head>
 		<meta charset="utf-8">
 		<title>전체 회원 조회</title>
-		<link rel="stylesheet" href="style.css">
+		<link rel="stylesheet" href="CSS/style.css">
 	</head>
 	<body>
 		<%

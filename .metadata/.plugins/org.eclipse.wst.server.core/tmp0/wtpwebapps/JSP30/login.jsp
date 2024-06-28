@@ -8,7 +8,7 @@
 	</head>
 	<body>
 		<h1>여기는 로그인 페이지 입니다.</h1>
-		<form method="post" action="login.do" name="frm">
+		<form method="post" action="login.do" name="frm"> <!-- doget에서 화면받아서 dopost로 보내기때문에 같은 서블릿으로보냄 -->
 			<table>
 				<tr>
 					<td>아이디</td>
@@ -29,7 +29,7 @@
 		</form>
 		<script>
 			function reg(){
-				location.href="register.jsp";
+				location.href="join.do";
 			}
 			//form 유효성검사
 			function check(){

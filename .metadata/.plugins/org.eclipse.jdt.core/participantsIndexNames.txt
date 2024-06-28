@@ -1,5 +1,15 @@
 INDEX VERSION 1.134
+D:\JSP11111\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\3446734526.index
+\AJAX04\src\main\java
+D:\JSP11111\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\1922682028.index
+\AJAXprac4\src\main\java
 D:\JSP11111\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\3991044853.index
 \AJAX03\src\main\java
+D:\JSP11111\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\1376497895.index
+\AJAXprac3\src\main\java
+D:\JSP11111\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\3584916388.index
+\AJAXprac2\src\main\java
+D:\JSP11111\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\1405583048.index
+\AJAXprac\src\main\java
 D:\JSP11111\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\4072585171.index
 \JSP30\src\main\java

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+ <student>
+ 	<mem>
+ 		<name>이름</name>
+ 		<subject>과목</subject>
+ 		<time>시간</time>
+ 	</mem>
+ 	
+ 	 <mem>
+ 		<name>홍길동</name>
+ 		<subject>국어</subject>
+ 		<time>9시</time>
+ 	</mem>
+ 	
+ 	
+ 	
+ 	 <mem>
+ 		<name>김북부</name>
+ 		<subject>수학</subject>
+ 		<time>10시</time>
+ 	</mem>
+ 	
+ 	<mem>
+ 		<name>이북부</name>
+ 		<subject>영어</subject>
+ 		<time>11시</time>
+ 	</mem>
+ 	
+ 	
+ 	
+ 	
+ 	
+ </student>
