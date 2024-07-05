@@ -154,6 +154,79 @@ public class MemberDAO {
 		
 		return result;
 	}
+	//회원가입처리
+	public int insertMember(Member m) {
+		int result = -1;		//-1 : 실패  , 1: 회원가입성공
+		String sql = "insert into member (name,userid,pwd,email,phone,admin) values(?,?,?,?,?,?);";
+		Connection conn = null;
+		PreparedStatement pstmt = null;
+		
+		try {
+			conn = getConnection();
+			pstmt = conn.prepareStatement(sql);
+			pstmt.setString(1, m.getName());
+			pstmt.setString(2, m.getUserid());
+			pstmt.setString(3, m.getPwd());
+			pstmt.setString(4, m.getEmail());
+			pstmt.setString(5, m.getPhone());
+			pstmt.setString(6, m.getAdmin());
+			result = pstmt.executeUpdate();
+			
+			//executeQuery() : return ResultSet - select문
+			//execute() : return boolean  - insert문에 사용, resultset의 존재여부
+			//executeUpdate() : return int - update나 delete문에 사용, return된값은 변동된 줄의 수
+			
+			//insert문을 executeUpdate에 쓰면 성공시 무조건 1반환, 실패시 아무것도 반환하지 않음 따라서 int로 확인가능
+			
+		}catch(Exception e) {
+			System.out.println("inserMember(m) 접속중 오류발생"+e);
+		}finally {
+			try {
+				if(pstmt!=null)pstmt.close();
+				if(conn!=null)pstmt.close();
+				
+			}catch(Exception ex) {
+				System.out.println("insertMember(m) 연결해제중 오류발생 "+ex);
+			}
+		}//finally
+		
+		return result;
+	}
+	//회원정보수정
+	public int updateMember(Member m) {
+		int result = -1; // -1은 업데이트 실패 , 그 이외에는 정보가 수정된 줄수
+		Connection conn = null;
+		PreparedStatement pstmt = null;
+		
+		String sql = "update member set name=? , pwd=? , email=? , phone =? , admin=? where userid=?;";
+		
+		try {
+			conn = getConnection();
+			pstmt = conn.prepareStatement(sql);
+			pstmt.setString(1, m.getName());
+			pstmt.setString(2, m.getPwd());
+			pstmt.setString(3, m.getEmail());
+			pstmt.setString(4, m.getPhone());
+			pstmt.setString(5, m.getAdmin());
+			pstmt.setString(6, m.getUserid());
+			
+			result = pstmt.executeUpdate();
+			
+		}catch(Exception e) {
+			System.out.println("updateMember(Member m) 접속중 오류발생 : "+e);
+		}finally {
+			try {
+				if(pstmt!=null)pstmt.close();
+				if(conn!=null)conn.close();
+				
+			}catch(Exception ex) {
+				System.out.println("updateMember(Member m) 연결해제중 오류발생 :"+ex);
+			}
+		}//finally
+		
+		return result;
+	}//updateMember(m)
 	
 	
-}
+	
+}//DAO끝

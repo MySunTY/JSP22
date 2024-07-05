@@ -18,8 +18,19 @@
 			</c:if>
 			<c:if test="${result==-1 }">
 				${userid }는 사용가능합니다.
-				<input type="button" value="사용하기">
+				<input type="button" value="사용하기" onclick="idok()">
 			</c:if>
 		</form>
+		<script>
+			function idok(){
+				//opener : 현재 보고잇는창을 오픈한 페이지
+				//self : 현재보고있는창
+				opener.document.frm.userId.value = document.frm.userId.value;
+				opener.document.frm.reId.value = document.frm.userId.value;
+				self.close();
+				
+			}
+			
+		</script>
 	</body>
 </html>
